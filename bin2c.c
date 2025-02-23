@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
 	// last byte
 	fprintf(fpout, "0x%02x\n", inbuf[bufsize - 1]);
 	fprintf(fpout, "};\n");
-	fprintf(fpout, "size_t %s_size = %zu;\n", varname, bufsize);
+	fprintf(fpout, "const size_t %s_size = %zu;\n", varname, bufsize);
 	
 	if (fpout != stdout)
 		fclose(fpout);
